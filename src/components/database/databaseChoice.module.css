@@ -1,0 +1,21 @@
+.choiceWrapper {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: #10233d;
+  font-size: 24px;
+}
+
+.choiceWrapper > img {
+  transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.choiceWrapper:hover {
+  cursor: pointer;
+  color: #dfffff;
+}
+
+.choiceWrapper:hover > img {
+  transform: scale(1.12);
+  filter: brightness(1.1);
+}
