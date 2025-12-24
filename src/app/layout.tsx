@@ -23,11 +23,13 @@ export default async function RootLayout({
     user = await getUserFromId(userId);
   }
 
+  console.log("RootLayout user:", user);
+
   return (
-    <html lang="en">
+    <html lang="en" className="notranslate">
       <body className={`antialiased bg-[url('/bg.png')] bg-cover`}>
         <UserProvider user={user}>
-          <SidePanel />
+          {!!user && <SidePanel />}
           {children}
         </UserProvider>
       </body>

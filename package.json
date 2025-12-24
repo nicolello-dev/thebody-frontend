@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack -p 3001",
     "build": "next build --turbopack",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -15,7 +15,8 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "next": "^15.5.6",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",

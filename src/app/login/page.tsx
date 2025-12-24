@@ -57,13 +57,14 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
     const response = await fetch(
       `http://${BACKEND_IP}:${BACKEND_PORT}/auth?name=${username}&password=${password}`
     );
     if (response.ok) {
-      setError(null);
       await setAuthCookies(username);
       router.push("/");
+      router.refresh();
     } else {
       setError("Credenziali non valide");
     }
